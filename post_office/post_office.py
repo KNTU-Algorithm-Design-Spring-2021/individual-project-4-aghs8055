@@ -5,8 +5,10 @@ def group(parts, k):
     part_no=0
     while truck_no<=k and truck_no<=k:
         load=[]
-        while sum(load)<avg and part_no<len(parts):
+        load_sum=0
+        while load_sum<avg and part_no<len(parts):
             load.append(parts[part_no])
+            load_sum+=parts[part_no]
             part_no+=1
         print("Trick #{}: ".format(truck_no)+" ".join([str(part) for part in load]))
         truck_no+=1
